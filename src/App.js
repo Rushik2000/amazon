@@ -1,23 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import amazon from '../src/pictures/amazon.png'
+import LeftSide from './components/LeftSide';
+import ProductData from './components/ProductData';
+import RightSide from './components/RightSide';
+import { useState } from 'react';
 
 function App() {
+
+  const [watchDisplay, setWatchDisplay] = useState("");
+  const [watchColor, setWatchColor] = useState("");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <header id='header'>
+          <img src={amazon} id='amazonPic'></img>
+        </header>
+        <div>
+          <h1>Hello</h1>
+        </div>
+        <div id='content'>
+          <LeftSide title={ProductData.title} description={ProductData.description} watchDisplay={watchDisplay} watchColor={watchColor}/>
+          <RightSide title={ProductData.title} description={ProductData.description} setWatchDisplay={setWatchDisplay} setWatchColor={setWatchColor}/>
+        </div>
+      </div>
     </div>
   );
 }

@@ -32,7 +32,127 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+#header {
+  background-color: darkslategrey;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100px;
+}
+
+#amazonPic {
+  height: 70px;
+  width: 200px;
+  margin: 25px;
+}
+
+#selectWatch {
+  height: 124px;
+  width: 133px;
+}
+
+#leftWatch {
+  height: 650px;
+  width: 700px;
+}
+
+#leftWatch1 {
+  height: 650px;
+  width: 700px;
+}
+
+#selectColor,
+#title {
+  font-size: 300%;
+  text-align: left;
+  margin-right: 320px;
+}
+
+#selectColor {
+  font-size: 180%;
+}
+
+#description {
+  text-align: left;
+  font-size: 115%;
+}
+
+#content {
+  overflow: auto;
+  width: 1870px;
+}
+
+#left {
+  width: 30%;
+  margin: 40px;
+  padding: 50px;
+  float: left;
+  position: relative;
+}
+
+#right {
+  width: 50%;
+  margin: 50px;
+  padding: 1em;
+  float: right;
+}
+
+#imageSet {
+  text-align: left;
+}
+
+#featureButton {
+  text-align: left;
+}
+
+#buttons1, #buttons2 {
+  background-color: rgb(162, 146, 146);
+  border-radius: 9px;
+  border: none; /* transparent border */
+  color: white;
+  padding: 13px 60px; /* remove 2px as we are now using the border */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  opacity: 0.6;
+  cursor: pointer;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#buttons2 {margin-left: 15px;}
+
+#buttons1:active, #buttons2:active, button:active
+{
+  background-color: #00CCC0;
+  border: 1px #000000 solid;
+  color: red;
+}
+
+#time, #heart {
+  font-size: 300%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+  position: absolute;
+  top: 305px;
+  left: 392px;
+  transform: translate(-50%, -50%);
+}
+
+#heart {top: 48%; left: 397px; border: none; pointer-events: none;}
+
+#watchStyleButton {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
