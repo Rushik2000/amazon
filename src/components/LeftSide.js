@@ -1,6 +1,6 @@
 import React from "react";
 import ProductData from '../components/ProductData';
-
+import MediaQuery from 'react-responsive'
 
 const LeftSide = (props) => {
 

@@ -19,6 +19,9 @@ const RightSide = (props) => {
                 <button id="buttons1" onClick={() => props.setWatchDisplay("time")}>{ProductData.featureList[0]}</button>
                 <button id='buttons2' onClick={() => props.setWatchDisplay("heart")}>{ProductData.featureList[1]}</button>
             </div>
+            <div id="buy">
+            <button id="buyButton">Buy</button>
+            </div>
         </div>
     )
 }

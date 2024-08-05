@@ -58,13 +58,14 @@
 }
 
 #leftWatch {
-  height: 650px;
-  width: 700px;
+  height: auto;
+  width: 100%;
+
 }
 
 #leftWatch1 {
-  height: 650px;
-  width: 700px;
+  height: auto;
+  width: 100%;
 }
 
 #selectColor,
@@ -84,22 +85,23 @@
 }
 
 #content {
-  overflow: auto;
-  width: 1870px;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
 }
 
 #left {
-  width: 30%;
-  margin: 40px;
-  padding: 50px;
+  width: 35%;
+  margin: 113px 0 0 0;
+  padding: 50px 0 0 0;
   float: left;
   position: relative;
 }
 
 #right {
   width: 50%;
-  margin: 50px;
-  padding: 1em;
+  margin: 10px;
+  padding: 100px 10px 40px 50px;
   float: right;
 }
 
@@ -111,48 +113,178 @@
   text-align: left;
 }
 
-#buttons1, #buttons2 {
+#buttons1,
+#buttons2,
+#buyButton {
   background-color: rgb(162, 146, 146);
   border-radius: 9px;
-  border: none; /* transparent border */
+  border: none;
+  /* transparent border */
   color: white;
-  padding: 13px 60px; /* remove 2px as we are now using the border */
+  padding: 13px 60px;
+  /* remove 2px as we are now using the border */
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 17px;
   opacity: 0.6;
   cursor: pointer;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#buttons2 {margin-left: 15px;}
+#buyButton {
+  background-color: green;
+}
 
-#buttons1:active, #buttons2:active, button:active
-{
+#buttons2 {
+  margin-left: 15px;
+}
+
+#buttons1:active,
+#buttons2:active,
+button:active {
   background-color: #00CCC0;
   border: 1px #000000 solid;
   color: red;
 }
 
-#time, #heart {
+#time,
+#heart {
   font-size: 300%;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: white;
   position: absolute;
-  top: 305px;
-  left: 392px;
+  top: 316px;
+  left: 322px;
   transform: translate(-50%, -50%);
 }
 
-#heart {top: 48%; left: 397px; border: none; pointer-events: none;}
+#heart {
+  width: 27%;
+  top: 50%;
+  left: 325px;
+  border: none;
+  pointer-events: none;
+}
 
 #watchStyleButton {
   background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+#buy {
+  text-align: left;
+  padding: 40px 0px 0px 0px
+}
+
+@media screen and (max-width: 1200px) {
+  .App {
+    width: 100%;
+  }
+
+  #content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #left,
+  #right {
+    width: 100%;
+  }
+
+  #right {
+    padding: 30px 10px 40px 50px
+  }
+
+  #leftWatch,
+  #leftWatch1 {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #buttons1 {
+    padding: 9px 38px;
+    margin: 10px;
+  }
+
+  #buttons2 {
+    padding: 9px 19px;
+    margin: 10px;
+  }
+
+  #buyButton {
+    margin: 0 55px;
+  }
+
+  #buy {
+    padding: 10px 0px 23px 0px
+  }
+
+  #imageSet {
+    text-align: left;
+    padding: 0 8px;
+  }
+
+  #leftWatch,
+  #leftWatch1 {
+    padding: 18px 0px 10px 10px;
+    height: auto;
+    width: 100%;
+  }
+
+  #left {
+    margin: 70px 0 0 0;
+    padding: 40px 0 0 0
+  }
+
+  #right {
+    margin: 0;
+    padding: 0px 0px 0px 42px;
+    text-align: center;
+  }
+
+  #title,
+  #selectColor {
+    margin-right: 92px;
+    text-align: center;
+  }
+
+  #title {
+    font-size: 214%;
+  }
+
+  #selectColor {
+    font-size: 160%;
+    margin-right: 120px;
+  }
+
+  #description {
+    text-align: center;
+    padding: 0 85px 0 0
+  }
+
+  #selectWatch {
+    height: 111px;
+    width: 127px;
+  }
+
+  #time {
+    font-size: 195%;
+    top: 207px;
+    left: 193px;
+  }
+
+  #heart {
+    top: 55%;
+    left: 196px;
+    width: 27%;
+  }
+
 }

@@ -14,16 +14,13 @@ function App() {
   return (
     <div className="App">
       <div>
-        <header id='header'>
+        <nav id='header'>
           <img src={amazon} id='amazonPic'></img>
-        </header>
-        <div>
-          <h1>Hello</h1>
-        </div>
-        <div id='content'>
-          <LeftSide title={ProductData.title} description={ProductData.description} watchDisplay={watchDisplay} watchColor={watchColor}/>
-          <RightSide title={ProductData.title} description={ProductData.description} setWatchDisplay={setWatchDisplay} setWatchColor={setWatchColor}/>
-        </div>
+        </nav>
+      </div>
+      <div id='content'>
+        <LeftSide title={ProductData.title} description={ProductData.description} watchDisplay={watchDisplay} watchColor={watchColor} />
+        <RightSide title={ProductData.title} description={ProductData.description} setWatchDisplay={setWatchDisplay} setWatchColor={setWatchColor} />
       </div>
     </div>
   );
